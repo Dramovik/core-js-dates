@@ -252,7 +252,7 @@ function getNextFridayThe13th(date) {
     checkDate.setMonth(checkDate.getMonth() + 1);
   }
 }
-getNextFridayThe13th(new Date(2024, 0, 1));
+
 /**
  * Returns the quarter of the year for a given date.
  *
