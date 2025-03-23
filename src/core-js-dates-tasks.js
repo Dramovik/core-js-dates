@@ -156,7 +156,6 @@ function isDateInPeriod(date, { start, end }) {
  * '2010-12-15T22:59:00.000Z' => '12/15/2010, 10:59:00 PM'
  */
 function formatDate(date) {
-  console.log(date);
   const newDate = new Date(Date.parse(date));
   const M = newDate.getMonth() + 1;
   const D = newDate.getUTCDate();
@@ -219,7 +218,6 @@ function getCountWeekendsInMonth(month, year) {
  * Date(2024, 1, 23) => 8
  */
 function getWeekNumberByDate(date) {
-  console.log(date);
   const firstDay = new Date(date.getFullYear(), 0, 1);
   let numOfDays = (date - firstDay) / 1000 / 60 / 60 / 24 + 1;
   if (firstDay.getDay() > 4) {
