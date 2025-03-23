@@ -245,12 +245,15 @@ function getNextFridayThe13th(date) {
   const checkMonth =
     date.getDate() <= 13 ? date.getMonth() : date.getMonth() + 1;
   const checkDate = new Date(date.getFullYear(), checkMonth, 13);
-  while (true) {
+  let check = true;
+  while (check) {
     if (checkDate.getDay() === 5) {
-      return checkDate;
+      check = !check;
+      break;
     }
     checkDate.setMonth(checkDate.getMonth() + 1);
   }
+  return checkDate;
 }
 
 /**
